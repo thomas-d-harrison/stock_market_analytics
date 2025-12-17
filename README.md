@@ -1,13 +1,13 @@
 # 📈 Stock Market Analytics System
 
-A data warehouse system using star schema design for analyzing stock market data with real-time fetching from Yahoo Finance.
+>A data warehouse system using star schema design for analyzing stock market data with real-time fetching from Yahoo Finance.
 
 ## Features
 
-- ⭐ Star schema database design (fact & dimension tables)
-- 📊 Real-time stock data from Yahoo Finance
+- ⭐ Star schema data design
+- 📊 Real-time market data
 - 🌐 Interactive web interface
-- 📉 Visual analytics with Plotly charts
+- 📉 Visual analytics with Plotly 
 - 💾 SQLite database for persistent storage
 
 ## Installation
@@ -115,3 +115,4 @@ Pull requests are welcome! For major changes, please open an issue first.
 
 
 MIT
+

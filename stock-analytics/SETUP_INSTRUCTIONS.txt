@@ -1,0 +1,37 @@
+========================================
+Stock Analytics - Setup Instructions
+========================================
+
+WINDOWS USERS:
+--------------
+1. Open Command Prompt or PowerShell in this directory
+2. Run: python -m venv venv
+3. Run: venv\Scripts\activate
+4. Run: pip install --upgrade pip
+5. Run: pip install --only-binary :all: numpy pandas
+6. Run: pip install -r requirements.txt
+7. Run: python scripts\initialize_db.py
+8. Run: python -m src.web.app
+9. Open browser to: http://127.0.0.1:5000
+
+MAC/LINUX USERS:
+----------------
+1. Open Terminal in this directory
+2. Run: python3 -m venv venv
+3. Run: source venv/bin/activate
+4. Run: pip install --upgrade pip
+5. Run: pip install -r requirements.txt
+6. Run: python scripts/initialize_db.py
+7. Run: python -m src.web.app
+8. Open browser to: http://127.0.0.1:5000
+
+TROUBLESHOOTING:
+----------------
+If you get compiler errors on Windows:
+- Make sure to use: pip install --only-binary :all: numpy pandas
+- This forces pip to use prebuilt wheels instead of compiling
+
+If imports fail:
+- Make sure you're in the project root directory
+- Make sure virtual environment is activated
+- Try: pip install -e .

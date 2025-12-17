@@ -10,55 +10,32 @@ A data warehouse system using star schema design for analyzing stock market data
 - 📉 Visual analytics with Plotly charts
 - 💾 SQLite database for persistent storage
 
-## Installation (Windows)
+## Installation
 
-1. Clone or download this repository
+1. **Clone or download this repository**
 
-2. Create a virtual environment:
+2. **Create a virtual environment:**
    ```bash
    python -m venv venv
    ```
 
-3. Activate the virtual environment:
+3. **Activate the virtual environment:**
    ```bash
-   venv\Scripts\activate
+   venv\\Scripts\\activate
    ```
+   > **Mac/Linux:** Use `source venv/bin/activate` instead
 
-4. Upgrade pip and install dependencies:
+4. **Upgrade pip and install dependencies:**
    ```bash
    pip install --upgrade pip
    pip install --only-binary :all: numpy pandas
    pip install -r requirements.txt
    ```
+   > **Mac/Linux:** You can skip the `--only-binary` command and just run `pip install -r requirements.txt`
 
-5. Initialize the database:
+5. **Initialize the database:**
    ```bash
-   python scripts\initialize_db.py
-   ```
-
-## Installation (Mac/Linux)
-
-1. Clone or download this repository
-
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   ```
-
-3. Activate the virtual environment:
-   ```bash
-   source venv/bin/activate
-   ```
-
-4. Install dependencies:
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-5. Initialize the database:
-   ```bash
-   python scripts/initialize_db.py
+   python -m scripts.initialize_db
    ```
 
 ## Usage

@@ -54,6 +54,42 @@ A data warehouse system using star schema design for analyzing stock market data
 ## Database Schema
 
 ### Star Schema Design
+```mermaid
+erDiagram
+    fact_stock_prices ||--o{ dim_date : "date_key"
+    fact_stock_prices ||--o{ dim_stock : "stock_key"
+    
+    dim_date {
+        int date_key PK
+        text date
+        int year
+        int month
+        int day
+        int quarter
+        int day_of_week
+        int week_of_year
+    }
+    
+    dim_stock {
+        int stock_key PK
+        text symbol
+        text company_name
+        text sector
+        text industry
+    }
+    
+    fact_stock_prices {
+        int fact_key PK
+        int date_key FK
+        int stock_key FK
+        real open_price
+        real high_price
+        real low_price
+        real close_price
+        real adj_close_price
+        int volume
+    }
+```
 
 **Fact Table:**
 - `fact_stock_prices` - Daily stock price data
@@ -76,5 +112,6 @@ A data warehouse system using star schema design for analyzing stock market data
 Pull requests are welcome! For major changes, please open an issue first.
 
 ## License
+
 
 MIT

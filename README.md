@@ -2,6 +2,18 @@
 
 >A data warehouse system using star schema design for analyzing stock market data with real-time fetching from Yahoo Finance.
 
+
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Flask](https://img.shields.io/badge/flask-2.0+-green.svg)
+![SQLite](https://img.shields.io/badge/sqlite-3-yellow.svg)
+
+
+## 🐍 Prerequisites
+
+**Python 3.8+** is required. Don't have Python? 
+
+[![](https://img.shields.io/badge/Download-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
+
 ## Features
 
 - ⭐ Star schema data design
@@ -9,6 +21,36 @@
 - 🌐 Interactive web interface
 - 📉 Visual analytics with Plotly 
 - 💾 SQLite database for persistent storage
+
+## 📂 Project Structure
+```
+stock-analytics/
+├── 📊 src/                     # Source code
+│   ├── 🗄️ database/
+│   │   ├── __init__.py
+│   │   └── warehouse.py        # Star schema & data warehouse logic
+│   ├── 📥 data/
+│   │   ├── __init__.py
+│   │   └── loader.py           # Yahoo Finance ETL processes
+│   └── 🌐 web/
+│       ├── __init__.py
+│       ├── app.py              # Flask application
+│       └── templates/
+│           └── index.html      # Dashboard UI
+├── 🧪 tests/                   # Unit tests
+│   ├── __init__.py
+│   └── test_warehouse.py
+├── ⚙️ scripts/                 # Utility scripts
+│   └── initialize_db.py        # Database initialization
+├── 🔧 config/                  # Configuration
+│   ├── __init__.py
+│   └── config.py               # App settings
+├── 💾 data/                    # Database storage
+│   └── stock_warehouse.db      # SQLite database (gitignored)
+├── 📄 requirements.txt         # Python dependencies
+├── 📝 README.md
+└── ⚙️ setup.py
+```
 
 ## Installation
 
@@ -98,21 +140,37 @@ erDiagram
 - `dim_date` - Date dimensions (year, month, quarter, week)
 - `dim_stock` - Stock information (symbol, company, sector, industry)
 
-## Project Structure
+## 🛠️ Tech Stack
 
-- `src/database/` - Database models and warehouse logic
-- `src/data/` - Data loading and ETL processes
-- `src/web/` - Flask web application
-- `tests/` - Unit tests
-- `scripts/` - Utility scripts
-- `config/` - Configuration files
+- **Backend:** Python, SQLite
+- **Frontend:** HTML, CSS, JavaScript
 
 ## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first.
 
-## License
+## 📝 License
 
+MIT License
 
-MIT
+Copyright (c) 2025 Thomas Harrison
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
